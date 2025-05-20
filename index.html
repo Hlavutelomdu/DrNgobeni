@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dr Ngobeni & Partners</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <h1>✚ Dr Ngobeni & Partners</h1>
+      <div class="reg">PR no 1114867 MBCHB MP0868671</div>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="section hero-section">
+    <div class="overlay">
+      <div class="hero-content">
+        <h2>Welcome to Dr. Ngobeni's General Medical Practice</h2>
+        <h3>Your Health, Our Priority!</h3>
+        <p>Comprehensive healthcare with care, professionalism, and compassion.</p>
+        <a href="appoitment.html" class="btn">Book an Appointment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Sections With Background -->
+  <div class="info-background">
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2>About Dr. Ngobeni</h2>
+        <p>Dr. Ngobeni is a dedicated and compassionate medical professional with years of experience in general practice. Committed to providing comprehensive healthcare, Dr. Ngobeni focuses on patient-centered care, combining medical expertise with empathy to promote wellness and improve quality of life.</p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+     <div class="container">
+      <h2>Our Services</h2>
+      <ul class="services-list">
+        <li>Diagnosis & Treatment</li>
+        <li>Family Planning</li>
+        <li>Special Referrals</li>
+        <li>Pre-employment Medicals</li>
+        <li>Acute & Chronic Management</li>
+        <li>Sonar</li>
+        <li>Vaccines</li>
+        <li>Contraceptives</li>
+        <li>Wound Care</li>
+        <li>Medical Report</li>
+        <li>IV Therapy</li>
+        <li>IV Immune Booster</li>
+      </ul>
+     </div>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- Include Font Awesome in your <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <div class="contact-details">
+      <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 19973 Zambezi St, Protea Glen Ext 20, Soweto, 1818, South Africa</p>
+      <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> <a href="tel:+27793036355">+27 79 3036 355</a></p>
+      <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:drngobeni.ne@gmail.com">drngobeni.ne@gmail.com</a></p>
+      <p><i class="fas fa-clock"></i> <strong>Hours:</strong> Mon–Fri: 9am–4pm | Sat: 9am–1pm | Sun & Public Holidays: Closed</p>
+    </div>
+  </div>
+</section>
+
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Dr. Ngobeni General Medical Practice</p>
+  </footer>
+
+  <!-- Scroll Spy Script -->
+  <script>
+    // Select all nav links
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    // Function to update active link on scroll
+    function updateActiveLink() {
+      let fromTop = window.scrollY + 100; // 100px offset for header height
+
+      navLinks.forEach(link => {
+        let section = document.querySelector(link.hash);
+        if (
+          section.offsetTop <= fromTop &&
+          (section.offsetTop + section.offsetHeight) > fromTop
+        ) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveLink);
+    // Initial call to set active on page load
+    updateActiveLink();
+  </script>
+
+</body>
+</html>
