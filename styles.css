@@ -288,3 +288,10 @@ footer {
     padding: 0.5rem 1.5rem;
   }
 }
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
